@@ -1,5 +1,5 @@
-let lgpdUrl = 'https://www.jsonplaceholder.typicode.com/posts';
-let lgpdHtml = `
+var lgpdUrl = 'https://www.jsonplaceholder.typicode.com/posts';
+var lgpdHtml = `
 <div class="lgpd">
     <div class="lgpd--left">
         Nós ultilizamos cookies para melhorar a sua  experiência de usuário.<br>
@@ -25,7 +25,7 @@ if(!lsContent) {
         let result = await fetch(lgpdUrl);
         let json = await result.json();
 
-        if(json.error != '') {
+        if(json.error != ' ') {
             let id = '123'; // aqui normalmente seria json.id;
             localStorage.setItem('lgpd', id);
         }
